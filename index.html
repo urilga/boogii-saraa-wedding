@@ -122,10 +122,72 @@ background-size: cover;
 	margin-left: 12em;
 }
 }
+
+
+.pulse-button {
+  position: relative;
+  top: 70%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: 0%;
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: rgb(255, 0, 191);
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(#5a99d4, .5);
+  animation:  pulse 1.5s infinite;
+  -webkit-animation: pulse 1.5s infinite;
+}
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    @include transform(scale(.9));
+  }
+  70% {
+    @include transform(scale(1));
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+    100% {
+    @include transform(scale(.9));
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+}
+
+.old-back {
+	
+    width: 100%;
+    display:block;
+    position:relative;
+    margin-top: 100px;
+    text-align: center;
+    height: 100%;
+	padding: 10px;
+  }
+
 	</style>
 	</head>
-	<body>
-		
+	<body style="background-color: rgba(241, 78, 149, 0.3);">
+		<div id="old-back" class="old-back">
+			<p>Компьютер болон өөр бусад том төхөөрөмж дээр үзвэл илүү тохиромжтой баярлалаа. 😊</p>
+			<p>Эхлэхэд дуу явах тул утасны дууг нээнэ үү. 🔊</p>
+			
+  <span id="start-button" class='pulse-button'>Эхлэх</span>
+		</div>
+		<div id="new-back" style="display: none;">
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
@@ -229,13 +291,6 @@ background-size: cover;
 		</div>
 	</div>
 
-	<!-- <div id="fh5co-event-video" class="fh5co-bg" style="background-image:url(images/378A1600.JPG);">
-		<video width="100%" controls autoplay>
-			<source src="images/invitevideo.mp4" type="video/mp4">
-		  Your browser does not support the video tag.
-		  </video>
-	</div> -->
-
 	<div id="fh5co-couple-story">
 		<div class="container">
 			<div class="row">
@@ -268,7 +323,7 @@ background-size: cover;
 									<span class="date">2018 оны 4-р сарын 1</span>
 								</div>
 								<div class="timeline-body">
-									<p>2018 оны 4-р сарын 1-нд Сараагийн төрсөн өрдийг тэмдэглэж гадуур зугаалав.</p>
+									<p>2018 оны 4-р сарын 1-нд Сараагийн төрсөн өдрийг тэмдэглэж гадуур зугаалав.</p>
 								</div>
 							</div>
 						</li>
@@ -345,20 +400,12 @@ background-size: cover;
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/v1.jpg); "> 
-						<a href="images/v1.jpg" target="_blank">
-						</a>
-					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/n5.jpg); ">
 						<a href="images/n5.jpg" class="color-2" target="_blank">
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/n17.JPG); ">
 						<a href="images/n17.JPG" class="color-3" target="_blank">
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/v4.jpg); ">
-						<a href="images/v4.jpg" class="color-4" target="_blank">
 						</a>
 					</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/n8.jpg); ">
@@ -374,16 +421,8 @@ background-size: cover;
 							<a href="images/n9.jpg" class="color-4" target="_blank">
 							</a>
 						</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/v8.jpg); ">
-								<a href="images/v8.jpg" class="color-3" target="_blank">
-								</a>
-							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/n16.JPG); ">
 								<a href="images/n16.JPG" class="color-3" target="_blank">
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/v10.jpg); ">
-								<a href="images/v10.jpg" class="color-3" target="_blank">
 								</a>
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q1.jpeg); ">
@@ -392,10 +431,6 @@ background-size: cover;
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q2.jpeg); ">
 								<a href="images/q2.jpeg" class="color-3" target="_blank">
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q3.jpeg); ">
-								<a href="images/q3.jpeg" class="color-3" target="_blank">
 								</a>
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q4.jpeg); ">
@@ -422,20 +457,12 @@ background-size: cover;
 								<a href="images/q9.jpeg" class="color-3" target="_blank">
 								</a>
 							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q10.jpeg); ">
-								<a href="images/q10.jpeg" class="color-3" target="_blank">
-								</a>
-							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q11.jpeg); ">
 								<a href="images/q11.jpeg" class="color-3" target="_blank">
 								</a>
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q12.jpeg); ">
 								<a href="images/q12.jpeg" class="color-3" target="_blank">
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q13.jpeg); ">
-								<a href="images/q13.jpeg" class="color-3" target="_blank">
 								</a>
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/q14.jpeg); ">
@@ -601,6 +628,8 @@ background-size: cover;
 	</div>
 
 
+	<audio id="sound" src="images/duu.mp3"></audio>
+
 	<footer id="fh5co-footer" role="contentinfo" style="padding: 1em;">
 		<div class="container">
 			<div class="row copyright">
@@ -627,7 +656,7 @@ background-size: cover;
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -654,6 +683,7 @@ background-size: cover;
 
 	<script>
 
+
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: 2023,
@@ -669,8 +699,18 @@ background-size: cover;
 			plural: false
     });
 
-	alert('Компьютер болон өөр бусад том төхөөрөмж дээр үзвэл илүү тохиромжтой баярлалаа. 😊')
 
+	$(document).ready(function() {
+		
+		$('#start-button').click(function() {
+        var audio = $('#sound')[0];
+        audio.play();
+		$('body').css('background-color', 'white');
+		$('#old-back').css('display', 'none');
+		$('#new-back').css('display', 'block');
+      });
+        
+    });
 </script>
 
 	</body>
